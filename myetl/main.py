@@ -16,7 +16,7 @@ def execute():
     data_folder = root_folder / "data"
     for file in data_folder.iterdir():
         name = file.stem
-        pd.read_csv(file).to_sql(name, engine)
+        pd.read_csv(file).to_sql(name, engine, index=False)
 
     transform_folder = root_folder / "transforms"
     out_folder = root_folder / "output"
@@ -31,6 +31,6 @@ def execute():
                 con.execute(statement)
 
             out_file = out_folder / f"{name}.csv"
-            pd.read_sql_table(name, engine).to_csv(out_file)
+            pd.read_sql_table(name, engine).to_csv(out_file, index=False)
 
     engine.dispose()

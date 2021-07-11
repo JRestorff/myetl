@@ -1,3 +1,3 @@
-,index,month,region,total_costs
-0,0,2020-10,East,-50.2
-1,3,2020-11,West,-35.8
+month,region,total_costs
+2020-10,East,-50.2
+2020-11,West,-35.8
