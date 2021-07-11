@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "Command line ETL tool"
 authors = ["Felix Restorff <glebvnerzhin@gmail.com>"]
 readme = "README.md"
+license = "Apache-2.0"
+repository = "https://github.com/gnerzhin/myetl"
 
 [tool.poetry.scripts]
 myetl = "myetl.main:app"
