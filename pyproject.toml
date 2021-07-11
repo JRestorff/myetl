@@ -13,6 +13,8 @@ myetl = "myetl.main:app"
 [tool.poetry.dependencies]
 python = "^3.9"
 typer = { extras = ["all"], version = "^0.3.2" }
+SQLAlchemy = "^1.4.20"
+pandas = "^1.3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
