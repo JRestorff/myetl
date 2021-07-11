@@ -1,0 +1,2 @@
+select distinct meister
+from bundesliga

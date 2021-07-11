@@ -16,7 +16,10 @@ def execute():
     data_folder = root_folder / "data"
     for file in data_folder.iterdir():
         name = file.stem
-        pd.read_csv(file).to_sql(name, engine, index=False)
+        if file.suffix == ".xlsx":
+            pd.read_excel(file).to_sql(name, engine, index=False)
+        else:
+            pd.read_csv(file).to_sql(name, engine, index=False)
 
     transform_folder = root_folder / "transforms"
     out_folder = root_folder / "output"
